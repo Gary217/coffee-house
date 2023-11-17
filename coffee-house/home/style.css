@@ -88,7 +88,7 @@ header {
 }
 
 .hero {
-  background: url(/coffee-house/assets/img/img-hero.png) lightgray 50%/cover no-repeat;
+  background: url(../../coffee-house/assets/img/img-hero.png) lightgray 50%/cover no-repeat;
   height: 40.25rem;
   padding: 6.25rem;
   border-radius: 2.5rem;
@@ -239,7 +239,7 @@ main {
   border-radius: 1.25rem;
 }
 .about__img1 {
-  background: url(/coffee-house/assets/img/about-1.png) lightgray 50% no-repeat;
+  background: url(../../coffee-house/assets/img/about-1.png) lightgray 50% no-repeat;
   height: 36.875rem;
 }
 @media (max-width: 1435px) {
@@ -248,7 +248,7 @@ main {
   }
 }
 .about__img2 {
-  background: url(/coffee-house/assets/img/about-2.png) lightgray 50% no-repeat;
+  background: url(../../coffee-house/assets/img/about-2.png) lightgray 50% no-repeat;
   height: 26.875rem;
 }
 @media (max-width: 1435px) {
@@ -257,7 +257,7 @@ main {
   }
 }
 .about__img3 {
-  background: url(/coffee-house/assets/img/about-3.png) lightgray 50% no-repeat;
+  background: url(../../coffee-house/assets/img/about-3.png) lightgray 50% no-repeat;
   height: 26.875rem;
 }
 @media (max-width: 1435px) {
@@ -266,7 +266,7 @@ main {
   }
 }
 .about__img4 {
-  background: url(/coffee-house/assets/img/about-4.png) lightgray 50% no-repeat;
+  background: url(../../coffee-house/assets/img/about-4.png) lightgray 50% no-repeat;
   height: 36.875rem;
 }
 @media (max-width: 1435px) {
@@ -323,7 +323,7 @@ main {
   line-height: 150%;
 }
 .mobile-app__img {
-  background: url(/coffee-house/assets/img/mobile-screens.png) no-repeat;
+  background: url(../../coffee-house/assets/img/mobile-screens.png) no-repeat;
   width: 50%;
   height: 39.375rem;
   background-size: contain;
