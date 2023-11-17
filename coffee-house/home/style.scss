@@ -1,0 +1,434 @@
+$Background-Body: #E1D4C9;
+$Background-Container: #665F55;
+$Border-Dark: #665F55;
+$Border-Light: #C1B6AD;
+$Text-Accent: #B0907A;
+$Text-Dark: #403F3D;
+$Text-Light: #E1D4C9;
+
+// $tablet: 1000px;
+// $mobile: 500px;
+
+html {
+    scroll-behavior: smooth;
+    @media (max-width: 1440px) {
+        scroll-behavior: smooth;
+    }
+    @media (max-width: 768px) {
+        scroll-behavior: smooth;
+    }
+    @media (max-width: 380px) {
+        scroll-behavior: smooth;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    list-style: none;
+    text-decoration: none;
+    transition: .3s;
+}
+
+body {
+    background: $Background-Body;
+    padding: 1.25rem 2.5rem 2.5rem;
+}
+
+.wrapper {
+    overflow: hidden;
+    min-height: 100%;
+}
+
+.container {
+    max-width: 90rem;
+    margin: 0 auto;
+
+    // @media (max-width: $tablet) {
+    //     padding: 0 1.88rem;
+    // }
+
+    // @media (max-width: $mobile) {
+    //     padding: 0 0.625rem;
+    // }
+}
+
+header {
+    gap: 1.25rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 150%;
+
+    &__logo {
+        width: 6.25rem;
+        height: 3.75rem;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.82rem;
+        padding-top: 0.4rem;
+    }
+
+    &__circle {
+        position: absolute;
+        z-index: -1;
+        margin-bottom: 1rem;
+    }
+
+    &__item {
+        display: flex;
+        gap: 0.5rem;
+        p {
+            color: $Text-Dark;
+        }
+    }
+}
+
+.nav {
+
+    &__list {
+        gap: 2.5rem;
+        display: flex;
+    }
+
+    &__link {
+        color: $Text-Dark;
+        letter-spacing: -0.02rem;
+    }
+}
+
+.hero {
+    background: url(/coffee-house/assets/img/img-hero.png) lightgray 50% / cover no-repeat;
+    height: 40.25rem;
+    padding: 6.25rem;
+    border-radius: 2.5rem;
+
+    &__section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2.5rem;
+        width: 33.125rem;
+        color: $Text-Light;
+    }
+
+    &__title {
+        font-size: 4.5rem;
+        line-height: 105%;
+    }
+
+    &__about {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: 0.01rem;
+    }
+
+    &__btn {
+        display: flex;
+        width: 12.5rem;
+        padding: 1.25rem 4.875rem;
+        justify-content: center;
+        border-radius: 6.25rem;
+        background: #E1D4C9;
+        color: $Text-Dark;
+        font-size: 1rem;
+        border-color: transparent;
+    }
+}
+
+.italic {
+    font-style: italic;
+    color: $Text-Accent;
+}
+
+main {
+    padding: 6.25rem 0;
+    display: flex;
+    gap: 6.25rem;
+    flex-direction: column;
+}
+
+.favorite-coffee {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+    color: $Text-Dark;
+
+    &__title {
+        font-size: 3.75rem;
+        line-height: 125%;
+    }
+
+    &__controls {
+        display: flex;
+        gap: 0.75rem;
+    }
+}
+
+.control {
+    &_active {
+        width: 2.5rem;
+        height: 0.25rem;
+        border-radius: 6.25rem;
+        background: $Border-Dark;
+    }
+
+    &_inactive {
+        width: 2.5rem;
+        height: 0.25rem;
+        border-radius: 6.25rem;
+        background: $Border-Light;
+    }
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+
+    &__btn {
+        display: flex;
+        width: 3.75rem;
+        height: 3.75rem;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6.25rem;
+        border: 1px solid $Border-Dark;
+        background: transparent;
+        color: $Text-Dark;
+    }
+
+    &__contant {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.25rem;
+        max-width: 29rem;
+    }
+
+    &__img {
+        max-height: 30rem;
+    }
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+
+    &__title {
+        text-align: center;
+        font-size: 1.5rem;
+        line-height: 125%;
+    }
+
+    &__about {
+        color: var(--text-dark, #403F3D);
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 150%;
+    }
+
+    &__price {
+        text-align: center;
+        font-size: 1.5rem;
+        line-height: 125%;
+    }
+}
+
+.about {
+    display: grid;
+    gap: 2.5rem;
+
+    &__title {
+        color: $Text-Dark;
+        font-size: 3.72rem;
+        line-height: 125%;
+        letter-spacing: 0.0025rem;
+    }
+
+    &__img-container {
+        display: flex;
+        gap: 2.5rem;
+    }
+
+    &__column {
+        width: 50%;
+        display: grid;
+        gap: 2.5rem;
+    }
+
+    &__img {
+        border-radius: 1.25rem;
+    }
+
+    &__img1 {
+        background: url(/coffee-house/assets/img/about-1.png) lightgray 50% no-repeat;
+        height: 36.875rem;
+        @media (max-width: 1435px) {
+            background-size: cover;
+            }
+    }
+
+    &__img2 {
+        background: url(/coffee-house/assets/img/about-2.png) lightgray 50% no-repeat;
+        height: 26.875rem;
+        @media (max-width: 1435px) {
+            background-size: cover;
+            }
+    }
+
+    &__img3 {
+        background: url(/coffee-house/assets/img/about-3.png) lightgray 50% no-repeat;
+        height: 26.875rem;
+        @media (max-width: 1435px) {
+            background-size: cover;
+            }
+    }
+
+    &__img4 {
+        background: url(/coffee-house/assets/img/about-4.png) lightgray 50% no-repeat;
+        height: 36.875rem;
+        @media (max-width: 1435px) {
+            background-size: cover;
+            }
+    }
+}
+
+.mobile-app {
+    display: flex;
+    align-items: center;
+    gap: 6.25rem;
+
+    &__offer {
+        width: 50%;
+        gap: 2.5rem;
+        display: grid;
+    }
+
+    &__title {
+        color: $Text-Dark;
+        font-size: 3.75rem;
+        line-height: 125%;
+    }
+
+    &__about {
+        color: $Text-Dark;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 150%;
+    }
+
+    &__btn-container {
+        display: flex;
+        gap: 1.25rem;
+    }
+
+    &__btn {
+        display: flex;
+        border-radius: 6.25rem;
+        border: 1px solid $Border-Dark;
+        background: transparent;
+        padding: 0.75rem 1.25rem;
+        align-items: center;
+        gap: 0.5rem;
+        max-width: 12.5rem;
+        width: 100%;
+        min-width: 11.17rem;
+    }
+
+    &__btn-subtitle {
+        color: $Text-Dark;
+        font-size: 0.625rem;
+        line-height: 140%;
+    }
+
+    &__btn-title {
+        color: $Text-Dark;
+        font-size: 1rem;
+        line-height: 150%;
+    }
+    
+    &__img {
+        background: url(/coffee-house/assets/img/mobile-screens.png) no-repeat;
+        width: 50%;
+        height: 39.375rem;
+        background-size: contain;
+        background-position: center;
+    }
+}
+
+.footer {
+    border-radius: 2.5rem;
+    background: $Background-Container;
+    display: flex;
+    gap: 6.25rem;
+    padding: 6.25rem;
+    align-items: center;
+
+    &__offer {
+        width: 50%;
+        gap: 2.5rem;
+        display: grid;
+    }
+
+    &__title {
+        color: $Text-Light;
+        font-size: 3.75rem;
+        line-height: 125%;
+    }
+
+    &__socials {
+        gap: 0.75rem;
+        display: flex;
+    }
+
+    &__btn {
+        border-radius: 6.25rem;
+        border: 1px solid $Border-Light;
+        background: transparent;
+        width: 3.75rem;
+        height: 3.75rem;
+    }
+
+    &__contacts {
+        width: 50%;
+        gap: 2.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__contacts-title {
+        color: $Text-Light;
+        font-size: 1.5rem;
+        line-height: 125%;
+    }
+
+    &__contacts-subtitle {
+        gap: 1rem;
+        display: grid;
+    }
+
+    &__contacts-link {
+        color: $Text-Light;
+        font-size: 1rem;
+        line-height: 150%;
+        gap: 0.5rem;
+        display: flex;
+    }
+}
