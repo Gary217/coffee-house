@@ -108,7 +108,7 @@ header {
 }
 
 .hero {
-    background: url(/coffee-house/assets/img/img-hero.png) lightgray 50% / cover no-repeat;
+    background: url(../../coffee-house/assets/img/img-hero.png) lightgray 50% / cover no-repeat;
     height: 40.25rem;
     padding: 6.25rem;
     border-radius: 2.5rem;
@@ -237,7 +237,7 @@ main {
     }
 
     &__about {
-        color: var(--text-dark, #403F3D);
+        color: $Text-Dark;
         text-align: center;
         font-size: 1rem;
         font-weight: 400;
@@ -278,7 +278,7 @@ main {
     }
 
     &__img1 {
-        background: url(/coffee-house/assets/img/about-1.png) lightgray 50% no-repeat;
+        background: url(../../coffee-house/assets/img/about-1.png) lightgray 50% no-repeat;
         height: 36.875rem;
         @media (max-width: 1435px) {
             background-size: cover;
@@ -286,7 +286,7 @@ main {
     }
 
     &__img2 {
-        background: url(/coffee-house/assets/img/about-2.png) lightgray 50% no-repeat;
+        background: url(../../coffee-house/assets/img/about-2.png) lightgray 50% no-repeat;
         height: 26.875rem;
         @media (max-width: 1435px) {
             background-size: cover;
@@ -294,7 +294,7 @@ main {
     }
 
     &__img3 {
-        background: url(/coffee-house/assets/img/about-3.png) lightgray 50% no-repeat;
+        background: url(../../coffee-house/assets/img/about-3.png) lightgray 50% no-repeat;
         height: 26.875rem;
         @media (max-width: 1435px) {
             background-size: cover;
@@ -302,7 +302,7 @@ main {
     }
 
     &__img4 {
-        background: url(/coffee-house/assets/img/about-4.png) lightgray 50% no-repeat;
+        background: url(../../coffee-house/assets/img/about-4.png) lightgray 50% no-repeat;
         height: 36.875rem;
         @media (max-width: 1435px) {
             background-size: cover;
@@ -365,7 +365,7 @@ main {
     }
     
     &__img {
-        background: url(/coffee-house/assets/img/mobile-screens.png) no-repeat;
+        background: url(../../coffee-house/assets/img/mobile-screens.png) no-repeat;
         width: 50%;
         height: 39.375rem;
         background-size: contain;

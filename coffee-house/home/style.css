@@ -204,7 +204,7 @@ main {
   line-height: 125%;
 }
 .description__about {
-  color: var(--text-dark, #403F3D);
+  color: #403F3D;
   text-align: center;
   font-size: 1rem;
   font-weight: 400;
