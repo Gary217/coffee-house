@@ -88,6 +88,13 @@ header {
     &__item {
         display: flex;
         gap: 0.5rem;
+        border-bottom: 0.125rem solid transparent;
+        padding-bottom: 0.1rem;
+
+        &:hover {
+            border-bottom: 0.125rem solid $Text-Dark;
+        }
+
         p {
             color: $Text-Dark;
         }
@@ -103,12 +110,17 @@ header {
 
     &__link {
         color: $Text-Dark;
-        letter-spacing: -0.02rem;
+        border-bottom: 0.125rem solid transparent;
+        padding-bottom: 0.2rem;
+
+        &:hover {
+            border-bottom: 0.125rem solid $Text-Dark;
+        }
     }
 }
 
 .hero {
-    background: url(../../coffee-house/assets/img/img-hero.png) lightgray 50% / cover no-repeat;
+    background: url(../assets/img/img-hero.jpg) 50% / cover no-repeat;
     height: 40.25rem;
     padding: 6.25rem;
     border-radius: 2.5rem;
@@ -131,7 +143,6 @@ header {
         font-size: 1rem;
         font-weight: 400;
         line-height: 150%;
-        letter-spacing: 0.01rem;
     }
 
     &__btn {
@@ -144,6 +155,11 @@ header {
         color: $Text-Dark;
         font-size: 1rem;
         border-color: transparent;
+
+        &:hover {
+            gap: 0.5rem;
+            padding: 1.25rem 3.8rem;
+        }
     }
 }
 
@@ -209,6 +225,19 @@ main {
         border: 1px solid $Border-Dark;
         background: transparent;
         color: $Text-Dark;
+        cursor: pointer;
+
+        &:hover {
+            background: $Background-Container;
+
+            .slider__btn-img {
+                stroke: $Text-Light;
+            }
+        }
+    }
+
+    .slider__btn-img {
+        stroke: $Text-Dark;
     }
 
     &__contant {
@@ -220,7 +249,9 @@ main {
     }
 
     &__img {
-        max-height: 30rem;
+        background: url(../assets/img/coffee-slider-1.png) 50% / cover no-repeat;
+        width: 100%;
+        min-height: 30rem;
     }
 }
 
@@ -257,9 +288,9 @@ main {
 
     &__title {
         color: $Text-Dark;
-        font-size: 3.72rem;
+        font-size: 3.71rem;
         line-height: 125%;
-        letter-spacing: 0.0025rem;
+        letter-spacing: 0.029rem;
     }
 
     &__img-container {
@@ -271,42 +302,53 @@ main {
         width: 50%;
         display: grid;
         gap: 2.5rem;
+
+    }
+
+    &__img-wrapper {
+        overflow: hidden;
+        border-radius: 1.25rem;
+        cursor: pointer;
     }
 
     &__img {
         border-radius: 1.25rem;
+
+        &:hover {
+            transform: scale(0.9);
+        }
     }
 
     &__img1 {
-        background: url(../../coffee-house/assets/img/about-1.png) lightgray 50% no-repeat;
-        height: 36.875rem;
-        @media (max-width: 1435px) {
-            background-size: cover;
-            }
+        background: url(../assets/img/about-1.jpg) 50% / cover no-repeat;
+        // height: 36.875rem;
+
+        height: 41.2rem;
+        margin: -2.1rem -2.3rem;
     }
 
     &__img2 {
-        background: url(../../coffee-house/assets/img/about-2.png) lightgray 50% no-repeat;
-        height: 26.875rem;
-        @media (max-width: 1435px) {
-            background-size: cover;
-            }
+        background: url(../assets/img/about-2.jpg) 50% / cover no-repeat;
+        // height: 26.875rem;
+
+        height: 30rem;
+        margin: -1.5rem -2.3rem;
     }
 
     &__img3 {
-        background: url(../../coffee-house/assets/img/about-3.png) lightgray 50% no-repeat;
-        height: 26.875rem;
-        @media (max-width: 1435px) {
-            background-size: cover;
-            }
+        background: url(../assets/img/about-3.jpg) 50% / cover no-repeat;
+        // height: 26.875rem;
+
+        height: 30rem;
+        margin: -1.5rem -2.3rem;
     }
 
     &__img4 {
-        background: url(../../coffee-house/assets/img/about-4.png) lightgray 50% no-repeat;
-        height: 36.875rem;
-        @media (max-width: 1435px) {
-            background-size: cover;
-            }
+        background: url(../assets/img/about-4.jpg) 50% / cover no-repeat;
+        // height: 36.875rem;
+
+        height: 41.2rem;
+        margin: -2.1rem -2.3rem;
     }
 }
 
@@ -350,22 +392,36 @@ main {
         max-width: 12.5rem;
         width: 100%;
         min-width: 11.17rem;
+        color: $Text-Dark;
+        cursor: pointer;
+        transition: .2s;
+
+        &:hover {
+            background: $Background-Container;
+            color: $Text-Light;
+            
+            .mobile-app__btn-img-color {
+                fill: $Text-Light;
+            }
+        }
     }
 
     &__btn-subtitle {
-        color: $Text-Dark;
         font-size: 0.625rem;
         line-height: 140%;
     }
 
     &__btn-title {
-        color: $Text-Dark;
         font-size: 1rem;
         line-height: 150%;
     }
+
+    &__btn-img-color {
+        fill: $Text-Dark;
+    }
     
     &__img {
-        background: url(../../coffee-house/assets/img/mobile-screens.png) no-repeat;
+        background: url(../assets/img/mobile-screens.png) no-repeat;
         width: 50%;
         height: 39.375rem;
         background-size: contain;
@@ -404,6 +460,23 @@ main {
         background: transparent;
         width: 3.75rem;
         height: 3.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        &:hover {
+            background: $Background-Body;
+            border: 1px solid $Background-Body;
+
+            .footer__btn-img {
+                stroke: $Text-Dark;
+            }
+        }
+    }
+
+    &__btn-img {
+        stroke: $Text-Light;
     }
 
     &__contacts {
@@ -425,10 +498,27 @@ main {
     }
 
     &__contacts-link {
+        height: 1.5rem;
         color: $Text-Light;
         font-size: 1rem;
         line-height: 150%;
         gap: 0.5rem;
         display: flex;
+        width: fit-content;
+        border-bottom: 0.125rem solid transparent;
+        padding-bottom: 1.6rem;
+        margin-bottom: -0.09rem;
+
+        &:hover {
+            border-bottom: 0.125rem solid $Text-Light;
+
+            .footer__contacts-img {
+                stroke: $Text-Light;
+            }
+        }
+    }
+
+    .footer__contacts-img {
+        stroke: $Text-Light;
     }
 }

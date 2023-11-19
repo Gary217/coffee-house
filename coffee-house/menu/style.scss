@@ -1,0 +1,374 @@
+$Background-Body: #E1D4C9;
+$Background-Container: #665F55;
+$Border-Dark: #665F55;
+$Border-Light: #C1B6AD;
+$Text-Accent: #B0907A;
+$Text-Dark: #403F3D;
+$Text-Light: #E1D4C9;
+
+// $tablet: 1000px;
+// $mobile: 500px;
+
+html {
+    scroll-behavior: smooth;
+    @media (max-width: 1440px) {
+        scroll-behavior: smooth;
+    }
+    @media (max-width: 768px) {
+        scroll-behavior: smooth;
+    }
+    @media (max-width: 380px) {
+        scroll-behavior: smooth;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    list-style: none;
+    text-decoration: none;
+    transition: .3s;
+}
+
+body {
+    background: $Background-Body;
+    padding: 1.25rem 2.5rem 2.5rem;
+}
+
+.wrapper {
+    overflow: hidden;
+    min-height: 100%;
+}
+
+.container {
+    max-width: 90rem;
+    margin: 0 auto;
+
+    // @media (max-width: $tablet) {
+    //     padding: 0 1.88rem;
+    // }
+
+    // @media (max-width: $mobile) {
+    //     padding: 0 0.625rem;
+    // }
+}
+
+header {
+    gap: 1.25rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 150%;
+
+    &__logo {
+        width: 6.25rem;
+        height: 3.75rem;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.82rem;
+        padding-top: 0.4rem;
+    }
+
+    &__circle {
+        position: absolute;
+        z-index: -1;
+        margin-bottom: 1rem;
+    }
+
+    &__item {
+        display: flex;
+        gap: 0.5rem;
+        border-bottom: 0.125rem solid $Text-Dark;
+        padding-bottom: 0.1rem;
+
+        p {
+            color: $Text-Dark;
+        }
+    }
+}
+
+.nav {
+
+    &__list {
+        gap: 2.5rem;
+        display: flex;
+    }
+
+    &__link {
+        color: $Text-Dark;
+        border-bottom: 0.125rem solid transparent;
+        padding-bottom: 0.2rem;
+
+        &:hover {
+            border-bottom: 0.125rem solid $Text-Dark;
+        }
+    }
+}
+
+.italic {
+    font-style: italic;
+    color: $Text-Accent;
+}
+
+main {
+    padding: 1.25rem 0 6.25rem;
+    display: flex;
+    gap: 2.5rem;
+    flex-direction: column;
+}
+
+.main-offer {
+    display: grid;
+    gap: 2.5rem;
+    justify-items: center;
+
+    &__title {
+        color: $Text-Dark;
+        text-align: center;
+        font-size: 3.75rem;
+        line-height: 125%;
+        max-width: 50rem;
+    }
+
+    &__tabs {
+        display: flex;
+        gap: 1rem;
+    }
+
+    &__btn {
+        color: $Text-Dark;
+        font-size: 1rem;
+        line-height: 150%;
+        display: flex;
+        padding: 0.5rem 1rem 0.5rem 0.5rem;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        border-radius: 6.25rem;
+        border: 1px solid $Border-Light;
+        background: transparent;
+        cursor: pointer;
+
+        &:hover {
+            background: $Background-Container;
+            color: $Text-Light;
+            border: 1px solid $Background-Container;
+    
+            img {
+            background: $Background-Body;
+            }
+        }
+    }
+
+    &__btn_active {
+        background: $Background-Container;
+        color: $Text-Light;
+        border: 1px solid $Background-Container;
+
+        img {
+        background: $Background-Body;
+        }
+    }
+
+    &__btn-img {
+        padding: 0.375rem;
+        border-radius: 6.25rem;
+        background: $Border-Light;
+    }
+}
+
+.main-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: center;
+
+    &__preview {
+        width: 19.375rem;
+        cursor: pointer;
+        border-radius: 2.5rem;
+        border: 1px solid $Border-Light;
+
+        &:hover {
+            .main-grid__img {
+                transform: scale(0.9);
+            }
+        }
+    }
+    
+    &__img-wrapper {
+        border-radius: 2.5rem;
+        overflow: hidden;
+    }
+
+    &__img {
+        border-radius: 2.5rem;
+        border: 1px solid $Border-Light;
+        // height: 19.375rem;
+
+        height: 21.5rem;
+        margin: -1.1rem -1.15rem;
+    }
+
+    &__img1 {
+        background: url(../assets/img/coffee/coffee-1.jpg) 50% / cover no-repeat;
+    }
+
+    &__img2 {
+        background: url(../assets/img/coffee/coffee-2.jpg) 50% / cover no-repeat;
+    }
+
+    &__img3 {
+        background: url(../assets/img/coffee/coffee-3.jpg) 50% / cover no-repeat;
+    }
+
+    &__img4 {
+        background: url(../assets/img/coffee/coffee-4.jpg) 50% / cover no-repeat;
+    }
+
+    &__img5 {
+        background: url(../assets/img/coffee/coffee-5.jpg) 50% / cover no-repeat;
+    }
+
+    &__img6 {
+        background: url(../assets/img/coffee/coffee-6.jpg) 50% / cover no-repeat;
+    }
+
+    &__img7 {
+        background: url(../assets/img/coffee/coffee-7.jpg) 50% / cover no-repeat;
+    }
+
+    &__img8 {
+        background: url(../assets/img/coffee/coffee-8.jpg) 50% / cover no-repeat;
+    }
+
+    &__description {
+        display: grid;
+        padding: 1.25rem;
+        align-content: space-between;
+        height: 12.25rem;
+    }
+
+    &__text {
+        display: grid;
+        gap: 0.75rem;
+    }
+
+    &__title, &__price {
+        color: $Text-Dark;
+        font-size: 1.5rem;
+        line-height: 125%;
+    }
+
+    &__about {
+        color: $Text-Dark;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: -0.007rem;
+    }
+}
+
+.footer {
+    border-radius: 2.5rem;
+    background: $Background-Container;
+    display: flex;
+    gap: 6.25rem;
+    padding: 6.25rem;
+    align-items: center;
+
+    &__offer {
+        width: 50%;
+        gap: 2.5rem;
+        display: grid;
+    }
+
+    &__title {
+        color: $Text-Light;
+        font-size: 3.75rem;
+        line-height: 125%;
+    }
+
+    &__socials {
+        gap: 0.75rem;
+        display: flex;
+    }
+
+    &__btn {
+        border-radius: 6.25rem;
+        border: 1px solid $Border-Light;
+        background: transparent;
+        width: 3.75rem;
+        height: 3.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        &:hover {
+            background: $Background-Body;
+            border: 1px solid $Background-Body;
+
+            .footer__btn-img {
+                stroke: $Text-Dark;
+            }
+        }
+    }
+
+    &__btn-img {
+        stroke: $Text-Light;
+    }
+
+    &__contacts {
+        width: 50%;
+        gap: 2.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__contacts-title {
+        color: $Text-Light;
+        font-size: 1.5rem;
+        line-height: 125%;
+    }
+
+    &__contacts-subtitle {
+        gap: 1rem;
+        display: grid;
+    }
+
+    &__contacts-link {
+        height: 1.5rem;
+        color: $Text-Light;
+        font-size: 1rem;
+        line-height: 150%;
+        gap: 0.5rem;
+        display: flex;
+        width: fit-content;
+        border-bottom: 0.125rem solid transparent;
+        padding-bottom: 1.6rem;
+        margin-bottom: -0.09rem;
+
+        &:hover {
+            border-bottom: 0.125rem solid $Text-Light;
+
+            .footer__contacts-img {
+                stroke: $Text-Light;
+            }
+        }
+    }
+
+    .footer__contacts-img {
+        stroke: $Text-Light;
+    }
+}
