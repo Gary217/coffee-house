@@ -6,12 +6,13 @@ $Text-Accent: #B0907A;
 $Text-Dark: #403F3D;
 $Text-Light: #E1D4C9;
 
-// $tablet: 1000px;
-// $mobile: 500px;
+$desktop: 1440px;
+$tablet: 910px;
+$mobile: 670px;
 
 html {
     scroll-behavior: smooth;
-    @media (max-width: 1440px) {
+    @media (max-width: $desktop) {
         scroll-behavior: smooth;
     }
     @media (max-width: 768px) {
@@ -36,6 +37,10 @@ html {
 body {
     background: $Background-Body;
     padding: 1.25rem 2.5rem 2.5rem;
+
+    @media (max-width: $mobile) {
+        padding: 1.25rem 1rem 2.5rem 1rem;
+    }
 }
 
 .wrapper {
@@ -46,14 +51,6 @@ body {
 .container {
     max-width: 90rem;
     margin: 0 auto;
-
-    // @media (max-width: $tablet) {
-    //     padding: 0 1.88rem;
-    // }
-
-    // @media (max-width: $mobile) {
-    //     padding: 0 0.625rem;
-    // }
 }
 
 header {
@@ -91,8 +88,8 @@ header {
         border-bottom: 0.125rem solid transparent;
         padding-bottom: 0.1rem;
 
-        &:hover {
-            border-bottom: 0.125rem solid $Text-Dark;
+        @media (max-width: $tablet) {
+            display: none;
         }
 
         p {
@@ -103,6 +100,10 @@ header {
 
 .nav {
 
+    @media (max-width: $tablet) {
+        display: none;
+    }
+
     &__list {
         gap: 2.5rem;
         display: flex;
@@ -112,37 +113,73 @@ header {
         color: $Text-Dark;
         border-bottom: 0.125rem solid transparent;
         padding-bottom: 0.2rem;
+    }
 
-        &:hover {
-            border-bottom: 0.125rem solid $Text-Dark;
+}
+
+.burger {
+    display: none;
+
+    @media (max-width: $tablet) {
+        display: grid;
+        width: 2.75rem;
+        height: 2.75rem;
+        justify-content: center;
+        padding: 0.88rem;
+        gap: 0.5rem;
+        align-items: center;
+        border-radius: 6.25rem;
+        border: 1px solid $Border-Dark;
+    
+        &__line {
+            stroke: $Text-Dark;
         }
     }
 }
 
+
 .hero {
     background: url(../assets/img/img-hero.jpg) 50% / cover no-repeat;
-    height: 40.25rem;
+    min-height: 40.25rem;
     padding: 6.25rem;
     border-radius: 2.5rem;
+
+    @media (max-width: $tablet) {
+        padding: 6.25rem 3.75rem;
+    }
+
+    @media (max-width: $mobile) {
+        padding: 3.75rem 1rem;
+        min-height: 34.5rem;
+    }
 
     &__section {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 2.5rem;
-        width: 33.125rem;
+        max-width: 33.125rem;
         color: $Text-Light;
     }
 
     &__title {
         font-size: 4.5rem;
         line-height: 105%;
+
+        @media (max-width: $mobile) {
+            font-size: 2.625rem;
+            line-height: 115%;
+        }
     }
 
     &__about {
         font-size: 1rem;
         font-weight: 400;
         line-height: 150%;
+
+        @media (max-width: $mobile) {
+            letter-spacing: -0.004rem;
+        }
     }
 
     &__btn {
@@ -156,7 +193,7 @@ header {
         font-size: 1rem;
         border-color: transparent;
 
-        &:hover {
+        @media (max-width: $tablet) {
             gap: 0.5rem;
             padding: 1.25rem 3.8rem;
         }
@@ -185,6 +222,14 @@ main {
     &__title {
         font-size: 3.75rem;
         line-height: 125%;
+
+        @media (max-width: $tablet) {
+            text-align: center;
+        }
+
+        @media (max-width: $mobile) {
+            font-size: 2rem;
+        }
     }
 
     &__controls {
@@ -215,6 +260,10 @@ main {
     width: 100%;
     justify-content: space-between;
 
+    @media (max-width: $mobile) {
+        justify-content: center;
+    }
+
     &__btn {
         display: flex;
         width: 3.75rem;
@@ -226,17 +275,16 @@ main {
         background: transparent;
         color: $Text-Dark;
         cursor: pointer;
+    }
 
-        &:hover {
-            background: $Background-Container;
+    &__btn_unvisible {
 
-            .slider__btn-img {
-                stroke: $Text-Light;
-            }
+        @media (max-width: $mobile) {
+            display: none;
         }
     }
 
-    .slider__btn-img {
+    &__btn-img {
         stroke: $Text-Dark;
     }
 
@@ -252,6 +300,10 @@ main {
         background: url(../assets/img/coffee-slider-1.png) 50% / cover no-repeat;
         width: 100%;
         min-height: 30rem;
+
+        @media (max-width: 380px) {
+            min-height: 21.75rem;
+        }
     }
 }
 
@@ -286,16 +338,38 @@ main {
     display: grid;
     gap: 2.5rem;
 
+    @media (max-width: $tablet) {
+        margin-bottom: -0.3rem;
+    }
+
+    @media (max-width: $mobile) {
+        margin-bottom: 0;
+    }
+
     &__title {
         color: $Text-Dark;
         font-size: 3.71rem;
         line-height: 125%;
         letter-spacing: 0.029rem;
+
+        @media (max-width: $mobile) {
+            font-size: 2rem;
+            letter-spacing: 0;
+        }
     }
 
     &__img-container {
         display: flex;
         gap: 2.5rem;
+
+        @media (max-width: $tablet) {
+            flex-wrap: wrap;
+            gap: 0.7rem;
+        }
+
+        @media (max-width: $mobile) {
+            gap: 2.5rem;
+        }
     }
 
     &__column {
@@ -303,52 +377,80 @@ main {
         display: grid;
         gap: 2.5rem;
 
+        @media (max-width: $tablet) {
+            width: 100%;
+            gap: 0rem;
+        }
+
     }
 
     &__img-wrapper {
         overflow: hidden;
         border-radius: 1.25rem;
         cursor: pointer;
-    }
 
+        @media (max-width: $tablet) {
+            margin: 0.3rem 0;
+        }
+
+        @media (max-width: $mobile) {
+            margin: 0;
+        }
+    }
+    
     &__img {
         border-radius: 1.25rem;
+        transform: scale(1.05);
 
-        &:hover {
-            transform: scale(0.9);
+        @media (max-width: $mobile) {
+            transform: scale(1.23);
         }
     }
 
     &__img1 {
         background: url(../assets/img/about-1.jpg) 50% / cover no-repeat;
-        // height: 36.875rem;
 
         height: 41.2rem;
         margin: -2.1rem -2.3rem;
+
+        @media (max-width: $tablet) {
+            margin: 0rem -0.12rem;
+            height: 36.875rem;
+        }
     }
 
     &__img2 {
         background: url(../assets/img/about-2.jpg) 50% / cover no-repeat;
-        // height: 26.875rem;
 
         height: 30rem;
         margin: -1.5rem -2.3rem;
+
+        @media (max-width: $tablet) {
+            display: none;
+        }
     }
 
     &__img3 {
         background: url(../assets/img/about-3.jpg) 50% / cover no-repeat;
-        // height: 26.875rem;
 
         height: 30rem;
         margin: -1.5rem -2.3rem;
+
+        @media (max-width: $tablet) {
+            display: none;
+        }
     }
 
     &__img4 {
         background: url(../assets/img/about-4.jpg) 50% / cover no-repeat;
-        // height: 36.875rem;
 
         height: 41.2rem;
         margin: -2.1rem -2.3rem;
+
+        @media (max-width: $tablet) {
+            margin: 0rem -0.12rem;
+            height: 36.875rem;
+        }
     }
 }
 
@@ -357,16 +459,32 @@ main {
     align-items: center;
     gap: 6.25rem;
 
+    @media (max-width: $tablet) {
+        flex-wrap: wrap;
+    }
+
+    @media (max-width: $mobile) {
+        gap: 2.5rem;
+    }
+
     &__offer {
         width: 50%;
         gap: 2.5rem;
         display: grid;
+
+        @media (max-width: $tablet) {
+            width: 100%;
+        }
     }
 
     &__title {
         color: $Text-Dark;
         font-size: 3.75rem;
         line-height: 125%;
+
+        @media (max-width: $mobile) {
+            font-size: 2rem;
+        }
     }
 
     &__about {
@@ -379,6 +497,10 @@ main {
     &__btn-container {
         display: flex;
         gap: 1.25rem;
+
+        @media (max-width: $mobile) {
+            flex-wrap: wrap;
+        }
     }
 
     &__btn {
@@ -395,15 +517,6 @@ main {
         color: $Text-Dark;
         cursor: pointer;
         transition: .2s;
-
-        &:hover {
-            background: $Background-Container;
-            color: $Text-Light;
-            
-            .mobile-app__btn-img-color {
-                fill: $Text-Light;
-            }
-        }
     }
 
     &__btn-subtitle {
@@ -426,6 +539,14 @@ main {
         height: 39.375rem;
         background-size: contain;
         background-position: center;
+
+        @media (max-width: $tablet) {
+            width: 100%;
+        }
+
+        @media (max-width: $mobile) {
+            height: 21.75rem;
+        }
     }
 }
 
@@ -437,16 +558,36 @@ main {
     padding: 6.25rem;
     align-items: center;
 
+    @media (max-width: $tablet) {
+        padding: 6.25rem 3.75rem;
+        flex-wrap: wrap;
+        min-height: 46rem;
+    }
+
+    @media (max-width: $mobile) {
+        padding: 3.75rem 1rem;
+        min-height: 32.875rem;
+        gap: 2.5rem;
+    }
+
     &__offer {
         width: 50%;
         gap: 2.5rem;
         display: grid;
+
+        @media (max-width: $tablet) {
+            width: 100%;
+        }
     }
 
     &__title {
         color: $Text-Light;
         font-size: 3.75rem;
         line-height: 125%;
+
+        @media (max-width: $mobile) {
+            font-size: 2rem;
+        }
     }
 
     &__socials {
@@ -464,15 +605,6 @@ main {
         align-items: center;
         justify-content: center;
         cursor: pointer;
-
-        &:hover {
-            background: $Background-Body;
-            border: 1px solid $Background-Body;
-
-            .footer__btn-img {
-                stroke: $Text-Dark;
-            }
-        }
     }
 
     &__btn-img {
@@ -484,6 +616,10 @@ main {
         gap: 2.5rem;
         display: flex;
         flex-direction: column;
+
+        @media (max-width: $tablet) {
+            width: 100%;
+        }
     }
 
     &__contacts-title {
@@ -508,7 +644,92 @@ main {
         border-bottom: 0.125rem solid transparent;
         padding-bottom: 1.6rem;
         margin-bottom: -0.09rem;
+    }
 
+    .footer__contacts-img {
+        stroke: $Text-Light;
+    }
+}
+
+@media (any-hover: hover) {
+
+    .header-menu__item {
+        &:hover {
+            border-bottom: 0.125rem solid $Text-Dark;
+        }
+    }
+
+    .nav__link {
+        &:hover {
+            border-bottom: 0.125rem solid $Text-Dark;
+        }
+    }
+
+    .burger {
+        &:hover {
+            background: $Background-Container;
+            cursor: pointer;
+
+            .burger__line {
+                stroke: $Text-Light;
+            }
+        }
+    }
+
+    .hero__btn {
+        &:hover {
+            gap: 0.5rem;
+            padding: 1.25rem 3.8rem;
+
+            @media (max-width: $tablet) {
+                padding: 1.25rem 4.875rem;
+            }
+        }
+    }
+
+    .slider__btn {
+        &:hover {
+            background: $Background-Container;
+
+            .slider__btn-img {
+                stroke: $Text-Light;
+            }
+        }
+    }
+
+    .about__img {
+        &:hover {
+            transform: scale(0.9);
+
+            @media (max-width: $tablet) {
+                transform: scale(1);
+            }
+        }
+    }
+
+    .mobile-app__btn {
+        &:hover {
+            background: $Background-Container;
+            color: $Text-Light;
+            
+            .mobile-app__btn-img-color {
+                fill: $Text-Light;
+            }
+        }
+    }
+
+    .footer__btn {
+        &:hover {
+            background: $Background-Body;
+            border: 1px solid $Background-Body;
+
+            .footer__btn-img {
+                stroke: $Text-Dark;
+            }
+        }
+    }
+
+    .footer__contacts-link {
         &:hover {
             border-bottom: 0.125rem solid $Text-Light;
 
@@ -516,9 +737,5 @@ main {
                 stroke: $Text-Light;
             }
         }
-    }
-
-    .footer__contacts-img {
-        stroke: $Text-Light;
     }
 }
