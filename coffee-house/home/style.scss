@@ -7,11 +7,8 @@ $Text-Dark: #403F3D;
 $Text-Light: #E1D4C9;
 
 $desktop: 1440px;
-$tablet: 1000px;
+$tablet: 910px;
 $mobile: 670px;
-
-// $tablet: 1000px;
-// $mobile: 500px;
 
 html {
     scroll-behavior: smooth;
@@ -95,10 +92,6 @@ header {
             display: none;
         }
 
-        &:hover {
-            border-bottom: 0.125rem solid $Text-Dark;
-        }
-
         p {
             color: $Text-Dark;
         }
@@ -120,10 +113,6 @@ header {
         color: $Text-Dark;
         border-bottom: 0.125rem solid transparent;
         padding-bottom: 0.2rem;
-
-        &:hover {
-            border-bottom: 0.125rem solid $Text-Dark;
-        }
     }
 
 }
@@ -141,14 +130,6 @@ header {
         align-items: center;
         border-radius: 6.25rem;
         border: 1px solid $Border-Dark;
-
-        &:hover {
-            background: $Background-Container;
-
-            .burger__line {
-                stroke: $Text-Light;
-            }
-        }
     
         &__line {
             stroke: $Text-Dark;
@@ -215,15 +196,6 @@ header {
         @media (max-width: $tablet) {
             gap: 0.5rem;
             padding: 1.25rem 3.8rem;
-        }
-
-        &:hover {
-            gap: 0.5rem;
-            padding: 1.25rem 3.8rem;
-
-            @media (max-width: $tablet) {
-                padding: 1.25rem 4.875rem;
-            }
         }
     }
 }
@@ -303,14 +275,6 @@ main {
         background: transparent;
         color: $Text-Dark;
         cursor: pointer;
-
-        &:hover {
-            background: $Background-Container;
-
-            .slider__btn-img {
-                stroke: $Text-Light;
-            }
-        }
     }
 
     &__btn_unvisible {
@@ -441,14 +405,6 @@ main {
         @media (max-width: $mobile) {
             transform: scale(1.23);
         }
-
-        &:hover {
-            transform: scale(0.9);
-
-            @media (max-width: $tablet) {
-                transform: scale(1);
-            }
-        }
     }
 
     &__img1 {
@@ -561,15 +517,6 @@ main {
         color: $Text-Dark;
         cursor: pointer;
         transition: .2s;
-
-        &:hover {
-            background: $Background-Container;
-            color: $Text-Light;
-            
-            .mobile-app__btn-img-color {
-                fill: $Text-Light;
-            }
-        }
     }
 
     &__btn-subtitle {
@@ -658,15 +605,6 @@ main {
         align-items: center;
         justify-content: center;
         cursor: pointer;
-
-        &:hover {
-            background: $Background-Body;
-            border: 1px solid $Background-Body;
-
-            .footer__btn-img {
-                stroke: $Text-Dark;
-            }
-        }
     }
 
     &__btn-img {
@@ -679,7 +617,7 @@ main {
         display: flex;
         flex-direction: column;
 
-        @media (max-width: $mobile) {
+        @media (max-width: $tablet) {
             width: 100%;
         }
     }
@@ -706,7 +644,92 @@ main {
         border-bottom: 0.125rem solid transparent;
         padding-bottom: 1.6rem;
         margin-bottom: -0.09rem;
+    }
 
+    .footer__contacts-img {
+        stroke: $Text-Light;
+    }
+}
+
+@media (any-hover: hover) {
+
+    .header-menu__item {
+        &:hover {
+            border-bottom: 0.125rem solid $Text-Dark;
+        }
+    }
+
+    .nav__link {
+        &:hover {
+            border-bottom: 0.125rem solid $Text-Dark;
+        }
+    }
+
+    .burger {
+        &:hover {
+            background: $Background-Container;
+            cursor: pointer;
+
+            .burger__line {
+                stroke: $Text-Light;
+            }
+        }
+    }
+
+    .hero__btn {
+        &:hover {
+            gap: 0.5rem;
+            padding: 1.25rem 3.8rem;
+
+            @media (max-width: $tablet) {
+                padding: 1.25rem 4.875rem;
+            }
+        }
+    }
+
+    .slider__btn {
+        &:hover {
+            background: $Background-Container;
+
+            .slider__btn-img {
+                stroke: $Text-Light;
+            }
+        }
+    }
+
+    .about__img {
+        &:hover {
+            transform: scale(0.9);
+
+            @media (max-width: $tablet) {
+                transform: scale(1);
+            }
+        }
+    }
+
+    .mobile-app__btn {
+        &:hover {
+            background: $Background-Container;
+            color: $Text-Light;
+            
+            .mobile-app__btn-img-color {
+                fill: $Text-Light;
+            }
+        }
+    }
+
+    .footer__btn {
+        &:hover {
+            background: $Background-Body;
+            border: 1px solid $Background-Body;
+
+            .footer__btn-img {
+                stroke: $Text-Dark;
+            }
+        }
+    }
+
+    .footer__contacts-link {
         &:hover {
             border-bottom: 0.125rem solid $Text-Light;
 
@@ -714,9 +737,5 @@ main {
                 stroke: $Text-Light;
             }
         }
-    }
-
-    .footer__contacts-img {
-        stroke: $Text-Light;
     }
 }

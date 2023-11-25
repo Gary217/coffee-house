@@ -7,11 +7,8 @@ $Text-Dark: #403F3D;
 $Text-Light: #E1D4C9;
 
 $desktop: 1440px;
-$tablet: 1000px;
-$mobile: 380px;
-
-// $tablet: 1000px;
-// $mobile: 500px;
+$tablet: 910px;
+$mobile: 465px;
 
 html {
     scroll-behavior: smooth;
@@ -40,6 +37,10 @@ html {
 body {
     background: $Background-Body;
     padding: 1.25rem 2.5rem 2.5rem;
+
+    @media (max-width: $mobile) {
+        padding: 1.25rem 1rem 2.5rem 1rem;
+    }
 }
 
 .wrapper {
@@ -112,10 +113,6 @@ header {
         color: $Text-Dark;
         border-bottom: 0.125rem solid transparent;
         padding-bottom: 0.2rem;
-
-        &:hover {
-            border-bottom: 0.125rem solid $Text-Dark;
-        }
     }
 }
 
@@ -132,14 +129,6 @@ header {
         align-items: center;
         border-radius: 6.25rem;
         border: 1px solid $Border-Dark;
-
-        &:hover {
-            background: $Background-Container;
-
-            .burger__line {
-                stroke: $Text-Light;
-            }
-        }
     
         &__line {
             stroke: $Text-Dark;
@@ -174,11 +163,19 @@ main {
         font-size: 3.75rem;
         line-height: 125%;
         max-width: 50rem;
+
+        @media (max-width: $mobile) {
+            font-size: 2rem;
+        }
     }
 
     &__tabs {
         display: flex;
         gap: 1rem;
+
+        @media (max-width: $mobile) {
+            gap: 0.5rem;
+        }
     }
 
     &__btn {
@@ -195,14 +192,8 @@ main {
         background: transparent;
         cursor: pointer;
 
-        &:hover {
-            background: $Background-Container;
-            color: $Text-Light;
-            border: 1px solid $Background-Container;
-    
-            img {
-            background: $Background-Body;
-            }
+        @media (max-width: $mobile) {
+            gap: 0.3rem;
         }
     }
 
@@ -234,12 +225,6 @@ main {
         cursor: pointer;
         border-radius: 2.5rem;
         border: 1px solid $Border-Light;
-
-        &:hover {
-            .main-grid__img {
-                transform: scale(0.9);
-            }
-        }
     }
 
     &__preview_unvisible {
@@ -321,9 +306,19 @@ main {
         letter-spacing: -0.007rem;
     }
 
-    &__refresh {
+    &__refresh-container {
 
         display: none;
+
+        @media (max-width: $tablet) {
+            align-items: center;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+    }
+
+    &__refresh {
 
         @media (max-width: $tablet) {
             display: flex;
@@ -355,6 +350,12 @@ main {
         min-height: 46rem;
     }
 
+    @media (max-width: $mobile) {
+        padding: 3.75rem 1rem;
+        min-height: 32.875rem;
+        gap: 2.5rem;
+    }
+
     &__offer {
         width: 50%;
         gap: 2.5rem;
@@ -369,6 +370,10 @@ main {
         color: $Text-Light;
         font-size: 3.75rem;
         line-height: 125%;
+
+        @media (max-width: $mobile) {
+            font-size: 2rem;
+        }
     }
 
     &__socials {
@@ -386,15 +391,6 @@ main {
         align-items: center;
         justify-content: center;
         cursor: pointer;
-
-        &:hover {
-            background: $Background-Body;
-            border: 1px solid $Background-Body;
-
-            .footer__btn-img {
-                stroke: $Text-Dark;
-            }
-        }
     }
 
     &__btn-img {
@@ -406,6 +402,10 @@ main {
         gap: 2.5rem;
         display: flex;
         flex-direction: column;
+
+        @media (max-width: $tablet) {
+            width: 100%;
+        }
     }
 
     &__contacts-title {
@@ -430,7 +430,75 @@ main {
         border-bottom: 0.125rem solid transparent;
         padding-bottom: 1.6rem;
         margin-bottom: -0.09rem;
+    }
 
+    .footer__contacts-img {
+        stroke: $Text-Light;
+    }
+}
+
+@media (any-hover: hover) {
+
+    .nav__link {
+        &:hover {
+            border-bottom: 0.125rem solid $Text-Dark;
+        }
+    }
+
+    .burger {
+        &:hover {
+            background: $Background-Container;
+            cursor: pointer;
+
+            .burger__line {
+                stroke: $Text-Light;
+            }
+        }
+    }
+
+    .main-offer__btn {
+        &:hover {
+            background: $Background-Container;
+            color: $Text-Light;
+            border: 1px solid $Background-Container;
+    
+            img {
+            background: $Background-Body;
+            }
+        }
+    }
+
+    .main-grid__preview {
+        &:hover {
+            .main-grid__img {
+                transform: scale(0.9);
+            }
+        }
+    }
+
+    .main-grid__refresh {
+        &:hover {
+            background: $Background-Container;
+            cursor: pointer;
+
+            .main-grid__refresh, svg {
+                stroke: $Text-Light;
+            }
+        }
+    }
+
+    .footer__btn {
+        &:hover {
+            background: $Background-Body;
+            border: 1px solid $Background-Body;
+
+            .footer__btn-img {
+                stroke: $Text-Dark;
+            }
+        }
+    }
+
+    .footer__contacts-link {
         &:hover {
             border-bottom: 0.125rem solid $Text-Light;
 
@@ -438,9 +506,5 @@ main {
                 stroke: $Text-Light;
             }
         }
-    }
-
-    .footer__contacts-img {
-        stroke: $Text-Light;
     }
 }
