@@ -6,18 +6,22 @@ $Text-Accent: #B0907A;
 $Text-Dark: #403F3D;
 $Text-Light: #E1D4C9;
 
+$desktop: 1440px;
+$tablet: 768px;
+$mobile: 380px;
+
 // $tablet: 1000px;
 // $mobile: 500px;
 
 html {
     scroll-behavior: smooth;
-    @media (max-width: 1440px) {
+    @media (max-width: $desktop) {
         scroll-behavior: smooth;
     }
-    @media (max-width: 768px) {
+    @media (max-width: $tablet) {
         scroll-behavior: smooth;
     }
-    @media (max-width: 380px) {
+    @media (max-width: $mobile) {
         scroll-behavior: smooth;
     }
 }
