@@ -121,6 +121,12 @@ header {
     border-radius: 6.25rem;
     border: 1px solid #665F55;
   }
+  .burger:hover {
+    background: #665F55;
+  }
+  .burger:hover .burger__line {
+    stroke: #E1D4C9;
+  }
   .burger__line {
     stroke: #403F3D;
   }
@@ -174,6 +180,11 @@ header {
 .hero__btn:hover {
   gap: 0.5rem;
   padding: 1.25rem 3.8rem;
+}
+@media (max-width: 1000px) {
+  .hero__btn:hover {
+    padding: 1.25rem 4.875rem;
+  }
 }
 
 .italic {

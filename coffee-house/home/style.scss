@@ -21,7 +21,7 @@ html {
     @media (max-width: 768px) {
         scroll-behavior: smooth;
     }
-    @media (max-width: $mobile) {
+    @media (max-width: 380px) {
         scroll-behavior: smooth;
     }
 }
@@ -145,6 +145,14 @@ header {
         align-items: center;
         border-radius: 6.25rem;
         border: 1px solid $Border-Dark;
+
+        &:hover {
+            background: $Background-Container;
+
+            .burger__line {
+                stroke: $Text-Light;
+            }
+        }
     
         &__line {
             stroke: $Text-Dark;
@@ -202,6 +210,10 @@ header {
         &:hover {
             gap: 0.5rem;
             padding: 1.25rem 3.8rem;
+
+            @media (max-width: $tablet) {
+                padding: 1.25rem 4.875rem;
+            }
         }
     }
 }
