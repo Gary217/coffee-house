@@ -1,6 +1,5 @@
 html {
   scroll-behavior: smooth;
-  font-size: 16px;
 }
 @media (max-width: 1440px) {
   html {
@@ -331,7 +330,6 @@ main {
   color: #403F3D;
   font-size: 3.71rem;
   line-height: 125%;
-  letter-spacing: 0.029rem;
 }
 @media (max-width: 670px) {
   .about__title {
