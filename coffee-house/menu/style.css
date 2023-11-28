@@ -182,11 +182,6 @@ main {
   background: transparent;
   cursor: pointer;
 }
-@media (max-width: 465px) {
-  .main-offer__btn {
-    gap: 0.3rem;
-  }
-}
 .main-offer__btn_active {
   background: #665F55;
   color: #E1D4C9;
