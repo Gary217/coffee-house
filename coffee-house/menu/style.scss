@@ -191,10 +191,6 @@ main {
         border: 1px solid $Border-Light;
         background: transparent;
         cursor: pointer;
-
-        @media (max-width: $mobile) {
-            gap: 0.3rem;
-        }
     }
 
     &__btn_active {
