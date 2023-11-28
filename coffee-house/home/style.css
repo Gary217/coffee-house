@@ -381,7 +381,11 @@ main {
 }
 .about__img {
   border-radius: 1.25rem;
-  transform: scale(1.05);
+}
+@media (max-width: 910px) {
+  .about__img {
+    transform: scale(1.05);
+  }
 }
 @media (max-width: 670px) {
   .about__img {
