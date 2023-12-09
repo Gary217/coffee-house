@@ -1,5 +1,3 @@
-console.log ("Score: 100 points!")
-
 document.addEventListener('DOMContentLoaded', () => {
     const burgerIcon = document.querySelector('.burger-icon');
     const burgerContant = document.querySelector('.burger-contant');

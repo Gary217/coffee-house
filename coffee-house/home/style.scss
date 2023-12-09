@@ -7,7 +7,8 @@ $Text-Dark: #403F3D;
 $Text-Light: #E1D4C9;
 
 $desktop: 1440px;
-$tablet: 910px;
+// $tablet: 910px;
+$tablet: 768px;
 $mobile: 670px;
 
 html {
@@ -118,7 +119,7 @@ header {
 
 }
 
-.burger {
+.burger-icon {
     display: none;
 
     @media (max-width: $tablet) {
@@ -132,8 +133,76 @@ header {
         border-radius: 6.25rem;
         border: 1px solid $Border-Dark;
     
-        &__line {
+        svg {
             stroke: $Text-Dark;
+        }
+
+
+        &_close {
+            padding: 0.75rem;
+        }
+
+        &__svg1, &__svg2 {
+            transition: .6s;
+        }
+
+        &__svg1_close {
+            position: absolute;
+            transform: rotate(135deg);
+        }
+
+        &__svg2_close {
+            position: absolute;
+            transform: rotate(-135deg);
+        }
+    }
+}
+
+.burger-contant {
+    display: none;
+
+    @media (max-width: $tablet) {
+        transition: .8s;
+        position: fixed;
+        right: -100%;
+        padding: 60px 40px;
+        top: 100px;
+        height: 100vh;
+        background: $Background-Body;
+        width: 100vw;
+        font-size: 32px;
+        line-height: 125%;
+        text-align: center;
+        gap: 100px;
+        display: grid;
+        align-content: flex-start;
+        min-height: 600px;
+
+        &__nav {
+            display: grid;
+            gap: 60px;
+        }
+
+        &__link {
+            color: $Text-Dark;
+        }
+    
+        &__item {
+            color: $Text-Dark;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            gap: 16px;
+            justify-content: center;
+
+            svg {
+                stroke: $Text-Dark;
+            }
+        }
+
+        &_open {
+            right: 0;
+            position: absolute;
         }
     }
 }
@@ -223,10 +292,7 @@ main {
     &__title {
         font-size: 3.75rem;
         line-height: 125%;
-
-        @media (max-width: $tablet) {
-            text-align: center;
-        }
+        text-align: center;
 
         @media (max-width: $mobile) {
             font-size: 2rem;
@@ -669,12 +735,12 @@ main {
         }
     }
 
-    .burger {
+    .burger-icon {
         &:hover {
             background: $Background-Container;
             cursor: pointer;
 
-            .burger__line {
+            svg {
                 stroke: $Text-Light;
             }
         }
