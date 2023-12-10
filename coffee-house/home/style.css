@@ -159,6 +159,7 @@ header {
     display: grid;
     align-content: flex-start;
     min-height: 600px;
+    z-index: 1;
   }
   .burger-contant__nav {
     display: grid;
@@ -185,10 +186,11 @@ header {
 }
 
 .hero {
-  background: url(../assets/img/img-hero.jpg) 50%/cover no-repeat;
   min-height: 40.25rem;
   padding: 6.25rem;
   border-radius: 2.5rem;
+  position: relative;
+  overflow: hidden;
 }
 @media (max-width: 768px) {
   .hero {
@@ -200,6 +202,16 @@ header {
     padding: 3.75rem 1rem;
     min-height: 34.5rem;
   }
+}
+.hero__bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
 }
 .hero__section {
   display: flex;
