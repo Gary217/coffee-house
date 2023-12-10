@@ -158,7 +158,7 @@ header {
     }
 }
 
-.burger-contant {
+.burger-content {
     display: none;
 
     @media (max-width: $tablet) {
@@ -177,6 +177,7 @@ header {
         display: grid;
         align-content: flex-start;
         min-height: 600px;
+        z-index: 1;
 
         &__nav {
             display: grid;
@@ -209,10 +210,11 @@ header {
 
 
 .hero {
-    background: url(../assets/img/img-hero.jpg) 50% / cover no-repeat;
     min-height: 40.25rem;
     padding: 6.25rem;
     border-radius: 2.5rem;
+    position: relative;
+    overflow: hidden;
 
     @media (max-width: $tablet) {
         padding: 6.25rem 3.75rem;
@@ -221,6 +223,16 @@ header {
     @media (max-width: $mobile) {
         padding: 3.75rem 1rem;
         min-height: 34.5rem;
+    }
+
+    &__bg-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
     }
 
     &__section {
@@ -355,7 +367,7 @@ main {
         stroke: $Text-Dark;
     }
 
-    &__contant {
+    &__content {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -721,7 +733,7 @@ main {
     }
 }
 
-@media (any-hover: hover) {
+// @media (any-hover: hover) {
 
     .header-menu__item {
         &:hover {
@@ -808,4 +820,4 @@ main {
             }
         }
     }
-}
+// }
