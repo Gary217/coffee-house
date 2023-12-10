@@ -156,7 +156,7 @@ header {
     }
 }
 
-.burger-contant {
+.burger-content {
     display: none;
 
     @media (max-width: $tablet) {
@@ -313,37 +313,37 @@ main {
         margin: -1.1rem -1.15rem;
     }
 
-    &__img1 {
-        background: url(../assets/img/coffee/coffee-1.jpg) 50% / cover no-repeat;
-    }
+    // &__img1 {
+    //     background: url(../assets/img/coffee/coffee-1.jpg) 50% / cover no-repeat;
+    // }
 
-    &__img2 {
-        background: url(../assets/img/coffee/coffee-2.jpg) 50% / cover no-repeat;
-    }
+    // &__img2 {
+    //     background: url(../assets/img/coffee/coffee-2.jpg) 50% / cover no-repeat;
+    // }
 
-    &__img3 {
-        background: url(../assets/img/coffee/coffee-3.jpg) 50% / cover no-repeat;
-    }
+    // &__img3 {
+    //     background: url(../assets/img/coffee/coffee-3.jpg) 50% / cover no-repeat;
+    // }
 
-    &__img4 {
-        background: url(../assets/img/coffee/coffee-4.jpg) 50% / cover no-repeat;
-    }
+    // &__img4 {
+    //     background: url(../assets/img/coffee/coffee-4.jpg) 50% / cover no-repeat;
+    // }
 
-    &__img5 {
-        background: url(../assets/img/coffee/coffee-5.jpg) 50% / cover no-repeat;
-    }
+    // &__img5 {
+    //     background: url(../assets/img/coffee/coffee-5.jpg) 50% / cover no-repeat;
+    // }
 
-    &__img6 {
-        background: url(../assets/img/coffee/coffee-6.jpg) 50% / cover no-repeat;
-    }
+    // &__img6 {
+    //     background: url(../assets/img/coffee/coffee-6.jpg) 50% / cover no-repeat;
+    // }
 
-    &__img7 {
-        background: url(../assets/img/coffee/coffee-7.jpg) 50% / cover no-repeat;
-    }
+    // &__img7 {
+    //     background: url(../assets/img/coffee/coffee-7.jpg) 50% / cover no-repeat;
+    // }
 
-    &__img8 {
-        background: url(../assets/img/coffee/coffee-8.jpg) 50% / cover no-repeat;
-    }
+    // &__img8 {
+    //     background: url(../assets/img/coffee/coffee-8.jpg) 50% / cover no-repeat;
+    // }
 
     &__description {
         display: grid;
@@ -502,7 +502,7 @@ main {
     }
 }
 
-@media (any-hover: hover) {
+// @media (any-hover: hover) {
 
     .nav__link {
         &:hover {
@@ -572,4 +572,4 @@ main {
             }
         }
     }
-}
+// }
