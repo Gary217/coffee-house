@@ -1,4 +1,4 @@
-import productsData from '../assets/products.json';
+// import productsData from '../assets/products.json';
 console.log ("Score: 90 points!")
 
 document.addEventListener('DOMContentLoaded', () => {
