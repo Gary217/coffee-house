@@ -29,12 +29,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const showTab = (argCategory) => {
         const productsContainer = document.querySelector('.main-grid');
+        const refresh = document.querySelector('.main-grid__refresh-container');
+
         productsContainer.innerHTML = "";
 
         const filteredProducts = productsData.filter(product => product.category === argCategory);
 
-        //generate cards from JSON
-        filteredProducts.forEach((product, index) => {
+        //generating cards from JSON
+        const cards = filteredProducts.map((product, index) => {
             const card = document.createElement('div');
             card.classList.add('main-grid__preview');
             productsContainer.appendChild(card);
@@ -70,28 +72,63 @@ document.addEventListener('DOMContentLoaded', () => {
             price.classList.add('main-grid__price');
             price.textContent = `$${product.price}`;
             description.appendChild(price);
+
+            return card;
         });
+
+        productsContainer.appendChild(refresh);
+        return cards;
+    };
+
+    //limiting cards
+    const cardsLimiter = (arg) => {
+        const screenWidth = window.innerWidth;
+
+        arg.forEach((value) => {
+            value.style.display = '';
+        });
+
+        if (screenWidth < 769) {
+            arg.forEach((value, index) => {
+                if (index > 3) {
+                    value.style.display = 'none';
+                };
+            });
+        }
+    };
+
+    const addEventListeners = (arg) => {
+        window.addEventListener('load', () => cardsLimiter(arg));
+        window.addEventListener('resize', () => cardsLimiter(arg));
     };
 
     //default tab
-    showTab('coffee'); 
+    const defaultCards = showTab('coffee'); 
     coffeeTab.classList.add('main-offer__btn_active');
+    cardsLimiter(defaultCards);
+    addEventListeners(defaultCards);
 
     //styling active-tab
     coffeeTab.addEventListener('click', (event) => {
-        showTab('coffee');
+        const coffeeCards = showTab('coffee');
+        cardsLimiter(coffeeCards);
+        addEventListeners(defaultCards);
         event.target.classList.add('main-offer__btn_active');
         teaTab.classList.remove('main-offer__btn_active');
         dessertTab.classList.remove('main-offer__btn_active');
     });
     teaTab.addEventListener('click', (event) => {
-        showTab('tea');
+        const teaCards = showTab('tea');
+        cardsLimiter(teaCards);
+        addEventListeners(teaCards);
         event.target.classList.add('main-offer__btn_active');
         coffeeTab.classList.remove('main-offer__btn_active');
         dessertTab.classList.remove('main-offer__btn_active');
     });
     dessertTab.addEventListener('click', (event) => {
-        showTab('dessert');
+        const dessertCards = showTab('dessert');
+        cardsLimiter(dessertCards);
+        addEventListeners(dessertCards);
         event.target.classList.add('main-offer__btn_active');
         teaTab.classList.remove('main-offer__btn_active');
         coffeeTab.classList.remove('main-offer__btn_active');
