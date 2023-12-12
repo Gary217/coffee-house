@@ -26,11 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const coffeeTab = document.querySelector('.main-offer__coffee-btn');
     const teaTab = document.querySelector('.main-offer__tea-btn');
     const dessertTab = document.querySelector('.main-offer__dessert-btn');
+    const refresh = document.querySelector('.main-grid__refresh-container');
 
     const showTab = (argCategory) => {
         const productsContainer = document.querySelector('.main-grid');
-        const refresh = document.querySelector('.main-grid__refresh-container');
-
         productsContainer.innerHTML = "";
 
         const filteredProducts = productsData.filter(product => product.category === argCategory);
@@ -94,43 +93,59 @@ document.addEventListener('DOMContentLoaded', () => {
                     value.style.display = 'none';
                 };
             });
+
+            //button refresh
+            refresh.addEventListener('click', () => {
+                arg.forEach((value) => {
+                    value.style.display = '';
+                });
+                refresh.style.display = 'none';
+            });
         }
+
+
     };
 
-    const addEventListeners = (arg) => {
+    //"live" reloading
+    const liveReloading = (arg) => {
         window.addEventListener('load', () => cardsLimiter(arg));
         window.addEventListener('resize', () => cardsLimiter(arg));
     };
 
-    //default tab
-    const defaultCards = showTab('coffee'); 
-    coffeeTab.classList.add('main-offer__btn_active');
-    cardsLimiter(defaultCards);
-    addEventListeners(defaultCards);
+    const optimiseFunc = (category) => {
+        const cards = showTab(category);
+        cardsLimiter(cards);
+        liveReloading(cards);
+    }
 
-    //styling active-tab
+    //default tab
+    optimiseFunc('coffee');
+    coffeeTab.classList.add('main-offer__btn_active');
+
+
+    //appointmenting active-tab
     coffeeTab.addEventListener('click', (event) => {
-        const coffeeCards = showTab('coffee');
-        cardsLimiter(coffeeCards);
-        addEventListeners(defaultCards);
+        optimiseFunc('coffee');
+
         event.target.classList.add('main-offer__btn_active');
         teaTab.classList.remove('main-offer__btn_active');
         dessertTab.classList.remove('main-offer__btn_active');
+        refresh.style.display = '';
     });
     teaTab.addEventListener('click', (event) => {
-        const teaCards = showTab('tea');
-        cardsLimiter(teaCards);
-        addEventListeners(teaCards);
+        optimiseFunc('tea')
+
         event.target.classList.add('main-offer__btn_active');
         coffeeTab.classList.remove('main-offer__btn_active');
         dessertTab.classList.remove('main-offer__btn_active');
+        refresh.style.display = 'none';
     });
     dessertTab.addEventListener('click', (event) => {
-        const dessertCards = showTab('dessert');
-        cardsLimiter(dessertCards);
-        addEventListeners(dessertCards);
+        optimiseFunc('dessert')
+
         event.target.classList.add('main-offer__btn_active');
         teaTab.classList.remove('main-offer__btn_active');
         coffeeTab.classList.remove('main-offer__btn_active');
+        refresh.style.display = '';
     });
 });
