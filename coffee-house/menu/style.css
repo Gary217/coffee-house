@@ -267,6 +267,9 @@ main {
   border-radius: 2.5rem;
   border: 1px solid #C1B6AD;
 }
+.main-grid__preview_disabled {
+  display: none;
+}
 @media (max-width: 768px) {
   .main-grid__preview_unvisible {
     display: none;
@@ -314,6 +317,9 @@ main {
     width: 100%;
     justify-content: center;
   }
+}
+.main-grid__refresh-container_disabled {
+  display: none;
 }
 @media (max-width: 768px) {
   .main-grid__refresh {

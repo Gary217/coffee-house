@@ -292,6 +292,10 @@ main {
         border: 1px solid $Border-Light;
     }
 
+    &__preview_disabled {
+        display: none;
+    }
+
     &__preview_unvisible {
 
         @media (max-width: $tablet) {
@@ -381,6 +385,10 @@ main {
             width: 100%;
             justify-content: center;
         }
+    }
+
+    &__refresh-container_disabled {
+        display: none;
     }
 
     &__refresh {
