@@ -1,0 +1,34 @@
+* {
+  transition: 0.3s;
+}
+
+.header-menu__item:hover {
+  border-bottom: 0.125rem solid #403F3D;
+}
+
+.nav__link:hover {
+  border-bottom: 0.125rem solid #403F3D;
+}
+
+.burger-icon:hover {
+  background: #665F55;
+  cursor: pointer;
+}
+.burger-icon:hover svg {
+  stroke: #E1D4C9;
+}
+
+.footer__btn:hover {
+  background: #E1D4C9;
+  border: 1px solid #E1D4C9;
+}
+.footer__btn:hover .footer__btn-img {
+  stroke: #403F3D;
+}
+
+.footer__contacts-link:hover {
+  border-bottom: 0.125rem solid #E1D4C9;
+}
+.footer__contacts-link:hover .footer__contacts-img {
+  stroke: #E1D4C9;
+}/*# sourceMappingURL=interactions.css.map */

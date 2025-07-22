@@ -1,0 +1,102 @@
+@use "../abstracts/variables.scss" as *;
+
+.footer {
+    border-radius: 2.5rem;
+    background: $Background-Container;
+    display: flex;
+    gap: 6.25rem;
+    padding: 6.25rem;
+    align-items: center;
+
+    @media (max-width: $tablet) {
+        padding: 6.25rem 3.75rem;
+        flex-wrap: wrap;
+        min-height: 46rem;
+    }
+
+    @media (max-width: $mobile) {
+        padding: 3.75rem 1rem;
+        min-height: 32.875rem;
+        gap: 2.5rem;
+    }
+
+    &__offer {
+        width: 50%;
+        gap: 2.5rem;
+        display: grid;
+
+        @media (max-width: $tablet) {
+            width: 100%;
+        }
+    }
+
+    &__title {
+        color: $Text-Light;
+        font-size: 3.75rem;
+        line-height: 125%;
+
+        @media (max-width: $mobile) {
+            font-size: 2rem;
+        }
+    }
+
+    &__socials {
+        gap: 0.75rem;
+        display: flex;
+    }
+
+    &__btn {
+        border-radius: 6.25rem;
+        border: 1px solid $Border-Light;
+        background: transparent;
+        width: 3.75rem;
+        height: 3.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    &__btn-img {
+        stroke: $Text-Light;
+    }
+
+    &__contacts {
+        width: 50%;
+        gap: 2.5rem;
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width: $tablet) {
+            width: 100%;
+        }
+    }
+
+    &__contacts-title {
+        color: $Text-Light;
+        font-size: 1.5rem;
+        line-height: 125%;
+    }
+
+    &__contacts-subtitle {
+        gap: 1rem;
+        display: grid;
+    }
+
+    &__contacts-link {
+        height: 1.5rem;
+        color: $Text-Light;
+        font-size: 1rem;
+        line-height: 150%;
+        gap: 0.5rem;
+        display: flex;
+        width: fit-content;
+        border-bottom: 0.125rem solid transparent;
+        padding-bottom: 1.6rem;
+        margin-bottom: -0.09rem;
+    }
+
+    .footer__contacts-img {
+        stroke: $Text-Light;
+    }
+}
