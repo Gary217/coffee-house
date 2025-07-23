@@ -479,7 +479,7 @@ main {
   max-width: 29rem;
 }
 .slider__img {
-  background: url(../assets/img/coffee-slider-1.png) 50%/cover no-repeat;
+  background: url(../../../assets/img/coffee-slider-1.png) 50%/cover no-repeat;
   width: 100%;
   min-height: 30rem;
 }
@@ -593,7 +593,7 @@ main {
   }
 }
 .about__img1 {
-  background: url(../assets/img/about-1.jpg) 50%/cover no-repeat;
+  background: url(../../../assets/img/about-1.jpg) 50%/cover no-repeat;
   height: 41.2rem;
   margin: -2.1rem -2.3rem;
 }
@@ -604,7 +604,7 @@ main {
   }
 }
 .about__img2 {
-  background: url(../assets/img/about-2.jpg) 50%/cover no-repeat;
+  background: url(../../../assets/img/about-2.jpg) 50%/cover no-repeat;
   height: 30rem;
   margin: -1.5rem -2.3rem;
 }
@@ -614,7 +614,7 @@ main {
   }
 }
 .about__img3 {
-  background: url(../assets/img/about-3.jpg) 50%/cover no-repeat;
+  background: url(../../../assets/img/about-3.jpg) 50%/cover no-repeat;
   height: 30rem;
   margin: -1.5rem -2.3rem;
 }
@@ -624,7 +624,7 @@ main {
   }
 }
 .about__img4 {
-  background: url(../assets/img/about-4.jpg) 50%/cover no-repeat;
+  background: url(../../../assets/img/about-4.jpg) 50%/cover no-repeat;
   height: 41.2rem;
   margin: -2.1rem -2.3rem;
 }
@@ -712,7 +712,7 @@ main {
   fill: #403F3D;
 }
 .mobile-app__img {
-  background: url(../assets/img/mobile-screens.png) no-repeat;
+  background: url(../../../assets/img/mobile-screens.png) no-repeat;
   width: 50%;
   height: 39.375rem;
   background-size: contain;

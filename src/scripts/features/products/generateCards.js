@@ -1,4 +1,4 @@
-import productsData from '../../../assets/products.json' with { type: 'json' };
+import productsData from '../../../../assets/products.json' with { type: 'json' };
 
 // Generating product cards
 export const generateCards = (argCategory) => {
