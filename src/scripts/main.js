@@ -9,3 +9,5 @@ if (page === 'home') {
 } else if (page === 'menu') {
     initMenu();
 }
+
+// console.log('Trigger gh-pages deploy');
