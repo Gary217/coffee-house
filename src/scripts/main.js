@@ -1,5 +1,6 @@
 import initHome from "./pages/home.js";
 import initMenu from "./pages/menu.js";
+import '../styles/main.scss';
 
 const page = document.body.dataset.page;
 

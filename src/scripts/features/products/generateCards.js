@@ -20,7 +20,8 @@ export const generateCards = (argCategory) => {
 
 		const img = document.createElement('div');
 		img.classList.add('main-grid__img');
-		img.style.background = `url(../assets/img/${product.category}/${product.category}-${index + 1}.jpg) 50% center / cover no-repeat`;
+		// __webpack_public_path__ — a global Webpack variable that holds the correct publicPath from the config (dev - '/'; prod - '/coffee-house/').
+		img.style.background = `url(${__webpack_public_path__}assets/img/${product.category}/${product.category}-${index + 1}.jpg) 50% center / cover no-repeat`;
 		imgWrapper.appendChild(img);
 
 		const description = document.createElement('div');
