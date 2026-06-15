@@ -1,0 +1,19 @@
+@use "../abstracts/variables.scss" as *;
+
+.nav {
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+
+    &__list {
+        gap: 2.5rem;
+        display: flex;
+    }
+
+    &__link {
+        color: $Text-Dark;
+        border-bottom: 0.125rem solid transparent;
+        padding-bottom: 0.2rem;
+    }
+}

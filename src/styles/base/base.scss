@@ -1,0 +1,33 @@
+@use "../abstracts/variables.scss" as *;
+
+html {
+    scroll-behavior: smooth;
+    @media (max-width: $desktop) {
+        scroll-behavior: smooth;
+    }
+    @media (max-width: 768px) {
+        scroll-behavior: smooth;
+    }
+    @media (max-width: 380px) {
+        scroll-behavior: smooth;
+    }
+}
+
+body {
+    background: $Background-Body;
+    padding: 1.25rem 2.5rem 2.5rem;
+
+    @media (max-width: $mobile) {
+        padding: 1.25rem 1rem 2.5rem 1rem;
+    }
+}
+
+.wrapper {
+    overflow: hidden;
+    min-height: 100%;
+}
+
+.container {
+    max-width: 90rem;
+    margin: 0 auto;
+}

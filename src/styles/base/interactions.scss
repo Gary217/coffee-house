@@ -1,0 +1,53 @@
+@use "../abstracts/variables.scss" as *;
+
+* {
+    transition: .3s;
+}
+
+// @media (any-hover: hover) {
+
+    .header-menu__item {
+        &:hover {
+            border-bottom: 0.125rem solid $Text-Dark;
+        }
+    }
+
+    .nav__link {
+        &:hover {
+            border-bottom: 0.125rem solid $Text-Dark;
+        }
+    }
+
+    .burger-icon {
+        &:hover {
+            background: $Background-Container;
+            cursor: pointer;
+
+            svg {
+                stroke: $Text-Light;
+            }
+        }
+    }
+
+    .footer__btn {
+        &:hover {
+            background: $Background-Body;
+            border: 1px solid $Background-Body;
+
+            .footer__btn-img {
+                stroke: $Text-Dark;
+            }
+        }
+    }
+
+    .footer__contacts-link {
+        &:hover {
+            border-bottom: 0.125rem solid $Text-Light;
+
+            .footer__contacts-img {
+                stroke: $Text-Light;
+            }
+        }
+    }
+    
+// }

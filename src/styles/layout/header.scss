@@ -1,0 +1,46 @@
+@use "../abstracts/variables.scss" as *;
+
+header {
+    gap: 1.25rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 150%;
+
+    &__logo {
+        width: 6.25rem;
+        height: 3.75rem;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.82rem;
+        padding-top: 0.4rem;
+    }
+
+    &__circle {
+        position: absolute;
+        z-index: -1;
+        margin-bottom: 1rem;
+    }
+
+    &__item {
+        display: flex;
+        gap: 0.5rem;
+        border-bottom: 0.125rem solid transparent;
+        padding-bottom: 0.1rem;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+
+        p {
+            color: $Text-Dark;
+        }
+    }
+}
